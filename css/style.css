@@ -430,6 +430,7 @@ a{
         width: fit-content;
         margin-bottom: 2.5rem;
         padding: 0;
+        height: fit-content;
     }
     .main-content .article {
         margin: 0;
