@@ -39,13 +39,19 @@ function goToPage(selectedIdx) {
         }
     });
 
-    if (selectedIdx - 1 === 3 && document.body.classList.contains('menu-open')) {
 
-        toggleMenu();
+    if (selectedIdx - 1 === 3) {
+
+        if (document.body.classList.contains('menu-open')) {
+
+            toggleMenu();
+        }
+        elMainNav[selectedIdx - 1].setAttribute("id", "");
+        elMainNav[0].setAttribute("id", "active-nav");
     }
+    
 
-    elMainNav[selectedIdx - 1].setAttribute("id", "");
-    elMainNav[0].setAttribute("id", "active-nav");
+    
 
 }
 
