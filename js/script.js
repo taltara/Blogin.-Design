@@ -33,6 +33,12 @@ function goToPage(selectedIdx) {
         }
     });
 
+    if(selectedIdx === 3 && document.body.classList.contains('menu-open')) {
+
+            
+            toggleMenu();
+    }
+
     
 }
 
@@ -50,10 +56,10 @@ function unfocusButton(elButton) {
     elButton.style.borderColor = '#c2c2c2';
 }
 
-function toggleMenu(elButton) {
+function toggleMenu() {
 
     document.body.classList.toggle('menu-open');
-    var elNav = document.querySelector('.main-nav');
+    // var elNav = document.querySelector('.main-nav');
 
     document.querySelector('.btn-menu').classList.toggle('active-btn-menu');
 }
