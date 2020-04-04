@@ -1,6 +1,6 @@
 'use strict';
 
-$(".contact-footer-scroller").click(function() {
+$(".contact-footer-scroller").click(function () {
     $([document.documentElement, document.body]).animate({
         scrollTop: $(".main-footer").offset().top
     }, 1000);
@@ -9,23 +9,29 @@ $(".contact-footer-scroller").click(function() {
 
 var journalDb = [
 
-    {img: 'assets/001.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.']},
-    {img: 'assets/002.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.']},
-    {img: 'assets/003.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.']},
+    {
+        img: 'assets/001.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.']
+    },
+    {
+        img: 'assets/002.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.']
+    },
+    {
+        img: 'assets/003.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.']
+    },
 
 ];
 
 
 function goToPage(selectedIdx) {
-    
+
     var elMainNav = document.querySelectorAll('.main-nav li');
-    
+
     elMainNav.forEach((nav, i) => {
 
-        if(i === selectedIdx) {
+        if (i === selectedIdx - 1) {
             nav.setAttribute("id", "active-nav");
         } else {
 
@@ -33,13 +39,14 @@ function goToPage(selectedIdx) {
         }
     });
 
-    if(selectedIdx === 3 && document.body.classList.contains('menu-open')) {
+    if (selectedIdx - 1 === 3 && document.body.classList.contains('menu-open')) {
 
-            
-            toggleMenu();
+        toggleMenu();
     }
 
-    
+    elMainNav[selectedIdx - 1].setAttribute("id", "");
+    elMainNav[0].setAttribute("id", "active-nav");
+
 }
 
 function focusButton(elButton) {
@@ -50,7 +57,7 @@ function focusButton(elButton) {
 }
 
 function unfocusButton(elButton) {
-    
+
     elButton.textContent = 'Continue Reading';
     elButton.style.color = '#c2c2c2';
     elButton.style.borderColor = '#c2c2c2';
