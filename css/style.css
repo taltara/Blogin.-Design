@@ -437,11 +437,12 @@ a{
     .main-content .article-content {
         width: 100%;
     }
-    .main-content .article-content p, .main-content .article-content h3 {
+    .main-content .article-content p,
+    .main-content .article-content h3 {
         padding-left: 1rem;
     }
     .main-content .article-content button {
-        margin-bottom: 2.5rem;
+        margin: 0 0 2.5rem 1rem;
     }
     .main-footer {
         height: 100%;
