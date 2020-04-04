@@ -415,7 +415,7 @@ a{
     list-style-type: none;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1150px) {
     .article {
         flex-basis: 100%;
         flex-direction: column;
@@ -435,7 +435,7 @@ a{
         margin: 0;
     }
     .article:first-of-type {
-        margin: 2.5rem 0 0;
+        margin: 5rem 0 0;
     }
     .container {
         padding: 0;
@@ -480,7 +480,7 @@ a{
     }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 900px) {
 
     .main-header {
 
@@ -540,6 +540,9 @@ a{
         height: 50px;
         line-height: 52px;
         font-size: 0.875rem;
+    }
+    .article:first-of-type {
+        margin: 7.5rem 0 0;
     }
 }
 
