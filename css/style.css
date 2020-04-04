@@ -533,6 +533,11 @@ a{
 }
 
 @media (max-width: 543px) {
+
+    .body {
+
+        font-size: 0.875rem;
+    }
     .container {
         width: 300px;
     }
