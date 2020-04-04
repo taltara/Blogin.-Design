@@ -1,5 +1,12 @@
 'use strict';
 
+$(".contact-footer-scroller").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".main-footer").offset().top
+    }, 1000);
+});
+
+
 var journalDb = [
 
     {img: 'assets/001.png', title: 'Duis aute irure dolor in henderit in voluptate.', text: ['Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.',
