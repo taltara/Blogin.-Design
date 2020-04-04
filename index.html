@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Blogin.</title>
 </head>
 
@@ -17,15 +17,25 @@
     <header class="main-header">
 
         <section class="header-content container flex space-between align-center">
-            <div class="main-logo">Blogin<span class="logo-period">.</span></div>
+            <a class="main-logo" href="#">Blogin<span class="logo-period">.</span></a>
             <ul class="main-nav flex clean-list">
-                <li onclick="goToPage(0)" id="active-nav">Journal</li>
-                <li onclick="goToPage(1)">About</li>
-                <li onclick="goToPage(2)">Work</li>
-                <li onclick="goToPage(3)">Contact</li>
+
+                <div class="dropdown">
+                    <li onclick="goToPage(0)" id="active-nav" class="dropbtn">Journal</li>
+                    <div class="dropdown-content">
+                      <a href="#">October 2016</a>
+                      <a href="#">January 2017</a>
+                      <a href="#">April 2017</a>
+                      <a href="#">July 2017</a>
+                    </div>
+                  </div> 
+                  <li onclick="goToPage(1)">About</li>
+                  <li onclick="goToPage(2)">Work</li>
+                  <li onclick="goToPage(3)">Contact</li>
+
             </ul>
 
-            <i class="far fa-compass btn-menu hide" onclick="toggleMenu()"></i>
+            <i class="far fa-compass btn-menu hide" onclick="toggleMenu(this)"></i>
         </section>
 
 
@@ -77,13 +87,13 @@
 
 
     <nav class="page-nav container flex space-between">
-        <button class="nav-btn-left">← Previous</button>
-        <button class="nav-btn-right">Next →</button>
+        <button class="nav-btn-left"><a href="#">← Previous</a></button>
+        <button class="nav-btn-right"><a href="#">Next →</a></button>
     </nav>
 
     <footer class="main-footer">
         <section class="footer-content container flex column align-center justify-center">
-            <div class="footer-logo">Blogin<span class="logo-period">.</span></div>
+            <a class="footer-logo" href="#">Blogin<span class="logo-period">.</span></a>
             <p class="footer-exit-intro">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at
                 <a href="https://www.Pixelhint.com">Pixelhint.com</a></p>
             <div class="social-links flex space-between">
@@ -112,21 +122,19 @@
                     <p class="modal-body-text1"></p>
                     <p class="modal-body-text2"></p>
                     <p class="modal-body-text3"></p>
-                    <button class="article-more-btn">Learn More</button>
+                    <button id="modal-more-btn">Learn More</button>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+
             </div>
         </div>
     </div>
 
 
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
